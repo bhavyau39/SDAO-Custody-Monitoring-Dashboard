@@ -1,4 +1,4 @@
-# Secure Digital Asset Operations (SDAO) Monitoring Dashboard
+# Cryptographic-Key-Hygiene-Compliance-Monitor-Dashboard
 
 ## 📌 Project Overview
 This project simulates an institutional crypto-custody monitoring environment. It focuses on **Key Hygiene**, **Policy Compliance**, and **Operational Triage** for HSM (Hardware Security Modules) and MPC (Multi-Party Computation) nodes.
