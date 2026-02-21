@@ -1,0 +1,25 @@
+import pandas as pd
+from google.colab import files
+from datetime import datetime, timedelta
+
+# Creating a dataset that is pre-formatted for Power BI
+# No cleaning required!
+data = {
+    "Timestamp": ["2026-02-21 09:00", "2026-02-21 09:15", "2026-02-21 09:30", 
+                  "2026-02-21 10:00", "2026-02-21 10:15", "2026-02-21 10:45", 
+                  "2026-02-21 11:00", "2026-02-21 11:30", "2026-02-21 12:00", "2026-02-21 12:15"],
+    "Key_ID": ["Key_001", "Key_002", "Key_003", "Key_004", "Key_005", 
+               "Key_001", "Key_006", "Key_007", "Key_008", "Key_009"],
+    "Key_Type": ["HSM-Vault", "MPC-Node", "HSM-Vault", "Cold-Storage", "MPC-Node", 
+                 "HSM-Vault", "MPC-Node", "HSM-Vault", "Cold-Storage", "MPC-Node"],
+    "Event_Type": ["Signing_Success", "Signing_Success", "Signing_Failure", "Signing_Success", "Signing_Failure", 
+                   "Key_Rotation", "Signing_Success", "Signing_Success", "Signing_Success", "Signing_Failure"],
+    "Signer_Weight": [3, 1, 2, 3, 1, 3, 2, 2, 3, 1],
+    # These dates are set specifically to show 'Clean' and 'Drifted' (over 90 days) keys
+    "Last_Rotation_Date": ["2025-12-01", "2026-01-15", "2025-11-10", "2025-08-20", "2026-02-01", 
+                           "2026-02-21", "2025-10-05", "2026-01-20", "2025-12-15", "2025-09-10"]
+}
+
+df = pd.DataFrame(data)
+df.to_csv("Ripple_Custody_Final.csv", index=False)
+files.download("Ripple_Custody_Final.csv")
