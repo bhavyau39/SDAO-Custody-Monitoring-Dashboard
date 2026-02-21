@@ -16,3 +16,8 @@ In real-world custody operations, logs from disparate sources often contain epoc
 - **Power BI:** Data Visualization & DAX (Data Analysis Expressions)
 - **Power Query (M):** ETL & Schema Normalization
 - **Python:** Synthetic Data Generation for Edge-Case Testing
+
+## 📊 Security Monitoring Dshboard
+the real-time security monitor developed to track key hygiene and rotation compliance.
+
+![Institutional Custody Security Monitor](docs/Security_Monitor.Dashboard.png)
